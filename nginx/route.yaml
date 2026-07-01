@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  labels:
+    app: nginx
+  name: nginx-route
+  namespace: nginx
+  labels:
+    app: nginx
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: nginx-lab
+    weight: 100
+  wildcardPolicy: None
