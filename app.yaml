@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/diesello/argo_demo.git
+    repoURL: https://github.com/vineetsunny/gitopstest.git
     targetRevision: HEAD
     path: nginx
     
